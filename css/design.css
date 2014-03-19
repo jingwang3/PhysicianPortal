@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* CSS Document */
+body {
+	background-color: #fdf2e1;
+}
+
+a:link {
+	font-size: 10px;
+	color: #3399CC;
+	text-decoration: none;
+}
+
+a:visited {
+	font-size: 10px;
+	color: #336699;
+	text-decoration: none;
+}
+
+a:hover {
+	font-size: 10px;
+	color: #3399CC;
+	text-decoration: underline;
+}
+
+a:active {
+	font-size: 10px;
+	color: #3399CC;
+	text-decoration: none;
+}
+
+a.topnavlinks:link {
+	font-size: 11px;
+	color: #666666;
+	text-decoration: none;;
+	font-weight: bold;
+}
+
+a.topnavlinks:visited {
+	font-size: 11px;
+	color: #666666;
+	text-decoration: none;;
+	font-weight: bold;
+}
+
+a.topnavlinks:hover {
+	font-size: 11px;
+	color: red;
+	text-decoration: underline;;
+	font-weight: bold;
+}
+
+a.topnavlinks:active {
+	font-size: 11px;
+	color: #666666;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#container {
+	display: block;
+	width: 814px;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+	max-width: 1058px;
+	border: solid 3px #FFFFFF;
+	background-color: #FFFFFF;
+}
+
+#loginbox {
+	display: block;
+	width: auto;
+	height: 107px;
+	background-image: url(images/login_bg.jpg);
+	verticle-align: top;
+}
+
+hr {
+	color: #333333;
+	background-color: #dcd6d3;
+	height: 1px;
+	border: none;
+	width: 100%
+}
+
+td.topnav {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+td.loginbg {
+	width: auto;
+	height: auto;
+	background-image: url(../images/login_bg.jpg);
+	background-repeat: repeat-x;
+}
+
+#squares {
+	display: block;
+	width: auto;
+	height: 7px;
+	background-image: url(../images/squares.jpg);
+	background-repeat: repeat-x;
+}
+
+#loginbox_edge {
+	display: block;
+	width: 10px;
+	height: 107px;
+	background-image: url(../images/login_edge.jpg);
+	background-repeat: no-repeat;
+}
+
+#loginbox_content {
+	display: block;
+	width: 120px;
+	height: 90px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #9b9b9b;
+	padding-top: 8px;
+	padding-left: 10px;
+	verticle-align: top;
+}
+
+#headline_content {
+	display: block;
+	width: 375px;
+	height: 107px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9b9b9b;
+	padding-top: 15px;
+	padding-left: 8px;
+	verticle-align: top;
+}
+
+#shadow {
+	display: block;
+	width: 814px;
+	height: 10px;
+	background-image: url(../images/login_drop_shadow.jpg);
+	background-repeat: repeat-x;
+}

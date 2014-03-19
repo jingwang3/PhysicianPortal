@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<html>
+<HEAD>
+
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="IBM Software Development Platform">
+<META http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Children's National Medical Center - Physicians Portal</title>
+<link href="css/design.css" rel="stylesheet" type="text/css" />
+<!--
+.style1 {
+	color: #333333;
+	font-weight: bold;
+}
+.style2 {color: #666666}
+-->
+</style>
+
+<script>
+function isEmpty(inputStr) {
+  if (inputStr == null || inputStr == "" || inputStr.length<1) {
+    return true;
+  }
+  for (var i=0; i<inputStr.length; i++) {
+    var oneChar=inputStr.charAt(i);
+    if (oneChar!=" ") {
+      return false;
+    }
+  }
+  return true;
+}
+function validateForm(form){
+    if(isEmpty(form.username.value)){
+       alert("Please enter username!");
+
+       return false;
+    }
+  if(isEmpty(form.password.value)){
+     alert("Please enter password!");
+     return false
+  }
+
+
+    form.submit();
+
+}
+
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<table width="815" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="5" align="left">
+		<div id="squares"></div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="left" bgcolor="#FFFFFF"><a href="http://www.childrensnational.org/"><img border=0
+			src="images/cnmc_logo.jpg" alt="Children's National Medical Center"
+			width="233" height="69" /></a></td>
+		<td colspan="3" bgcolor="#FFFFFF" class="topnav"><a
+			class="topnavlinks"
+			href="http://www.childrensnational.org/ContactUs/default.aspx">Contact Us
+		|</a> <a class="topnavlinks"
+			href="http://www.childrensnational.org/LocationsAndDirections/default.aspx">Directions
+		|</a> <a class="topnavlinks"
+			href="http://www.childrensnational.org/refer/default.aspx">Refer a
+		Patient</a>
+		<hr />
+		</td>
+	</tr>
+	<tr>
+		<td height="10" colspan="5">
+		<div id="shadow"></div>
+		</td>
+	</tr>
+	<tr>
+		<td width="383" height="117" bgcolor="#FFFFFF">
+		<div id="headline_content"><b>Physician to Physician Access Line
+		202-476-4880</b><br />
+		Children's National Medical Center is renewing this commitment:<br />
+		Working with you we will provide the highest level of care. <br />
+		</div>
+		</td>
+		<td width="10" valign="top" bgcolor="#FFFFFF">
+		<div id="loginbox_edge"></div>
+		</td>
+		<td width="130" valign="top" bgcolor="#FFFFFF" class="loginbg" nowrap>
+		
+		<div id="loginbox_content">
+		
+<form action="login.do" method="post" id="login_form" >		<p>Username <input type="text" id="name" value="" name="username"    />
+			 <label></label> Password <label> 
+			<input type="password" id="name" value="" name="password"    /> </label>
+		<label>
+
+		<input type="hidden"  id="name" value="P135" name="domain"    /> 
+		 <input type="submit" id="login_form_login_button" value="Login" onclick="return validateForm(this.form);"></label></p>
+		</form>
+		</div>
+		</td>
+		<td width="1" bgcolor="#FFFFFF"></td>
+		<td width="290" valign="top" bgcolor="#FFFFFF" class="loginbg">
+		<div id="loginbox_content"><br />
+
+		</div>
+		</td>
+		<td width="1" align="right" valign="top"></td>
+	</tr>
+	<tr>
+		<td height="10px" bgcolor="#FFFFFF"></td>
+		<td colspan="3" bgcolor="#FFFFFF"></td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="5"><a href="http://childrensnational.org/about/privacy.aspx"><img border="0" src="images/login_footer.jpg" width="814"
+			height="39" /></a></td>
+	</tr>
+</table>
+</div>
+
+
+
+
+<script src="https://www.childrensnational.org/scripts/Gateway_trackExternal.js" type="text/JavaScript"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10185736-1");
+pageTracker._setDomainName("childrensgateway.org");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+
+
+
+
+</html>
+
