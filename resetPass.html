@@ -12,7 +12,7 @@
 <META http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Children's National Medical Center - Physicians Portal</title>
-<link href="css/designNew.css" rel="stylesheet" type="text/css" />
+<link href="css/design.css" rel="stylesheet" type="text/css" />
 <!--
 .style1 {
   color: #333333;
@@ -77,6 +77,40 @@ function isValidPass(){
     return true;
   }
 }
+
+function smartYear()
+{
+  var d = new Date();
+  document.getElementById("footerYear").innerHTML=d.getFullYear();
+  if(document.documentElement.clientHeight <= 900){
+    if(document.getElementById("footerBox").style.position!="relative"){
+      document.getElementById("footerBox").style.position="relative";
+      document.getElementById("footerBox").style.bottom="-214px";
+    }
+  }else{
+    if(document.getElementById("footerBox").style.position!="fixed"){
+      document.getElementById("footerBox").style.position="fixed";
+      document.getElementById("footerBox").style.bottom="0px";
+    }
+  }
+}
+
+//The method below adjust footer position status.
+window.onresize=function(){
+  //console.log(document.getElementById("wrapper").clientHeight);
+  if(document.documentElement.clientHeight <= 900){
+    if(document.getElementById("footerBox").style.position!="relative"){
+      document.getElementById("footerBox").style.position="relative";
+      document.getElementById("footerBox").style.bottom="-214px";
+    }
+  }else{
+    if(document.getElementById("footerBox").style.position!="fixed"){
+      document.getElementById("footerBox").style.position="fixed";
+      document.getElementById("footerBox").style.bottom="0px";
+    }
+  }
+}
+
 </script>
 </head>
 
@@ -101,9 +135,9 @@ function isValidPass(){
       </div>
     
       <div id="loginbox_content">
-      <span id="error" class="msg">Password is expired.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+      <span id="error" class="msg">Password is expired.</span>
     <form action="login.do" method="post" id="login_form">
-      <p><label>Username:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fcorder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="hidden" id="name" value="fcorder" name="username"/></label></p>
+      <p><label>Username: </label><span class="user-name">fcorder</span><input type="hidden" id="name" value="fcorder" name="username"/></p>
       <p><label>Old Password: </label><input type="password" id="name" value=""  name="password"/></p>
       <p><label>New Password: </label><input type="password" id="name" value=""  name="newPassword"/></p>
       <p><label>Retype Password: </label><input type="password" id="name"  name="newPassword2"    /> </p>
@@ -113,28 +147,25 @@ function isValidPass(){
       </div>
       <div id="loginbox_content"><br /></div>
     </div>
+</div>
 
-<div class="push"></div>
-
-<div class="pre-footer">
+<div id="footerBox" class="pre-footer">
   <div class="pre-footer-content">
     <p>111 Michigan Ave NW Washington, DC 20010<br/>
       <strong>Phone:</strong> 202-476-5000</p>
   </div>
-</div>  
-
-        
-<div class="footer-wrapper">        
+  <div class="footer-wrapper">        
         <div id="footer-navigation">
-      <a href="http://childrensnational.org/contact/">Contact Us</a>
-        &nbsp; | &nbsp; 
-      <a href="http://childrensnational.org/Visiting/locations/">Directions</a>
-        &nbsp; | &nbsp; 
-      <a href="http://www.childrensnational.org/refer/default.aspx">Refer a Patient</a>
-        &nbsp; | &nbsp; 
-      <a href="http://childrensnational.org/about/privacy.aspx">&copy; <span id="footerYear">2014</span> &amp; Privacy Statement</a>
+        <a href="http://childrensnational.org/contact/">Contact Us</a>
+          &nbsp; | &nbsp; 
+        <a href="http://childrensnational.org/Visiting/locations/">Directions</a>
+          &nbsp; | &nbsp; 
+        <a href="http://www.childrensnational.org/refer/default.aspx">Refer a Patient</a>
+          &nbsp; | &nbsp; 
+        <a href="http://childrensnational.org/about/privacy.aspx">&copy; <span id="footerYear">2014</span> &amp; Privacy Statement</a>
       </div>
-</div>
+  </div>
+</div>  
 
 <script src="https://www.childrensnational.org/scripts/Gateway_trackExternal.js" type="text/JavaScript"></script>
 <script type="text/javascript">

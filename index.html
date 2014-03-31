@@ -54,45 +54,43 @@ function validateForm(form){
 
 function smartYear()
 {
-	var d = new Date();
-	document.getElementById("footerYear").innerHTML=d.getFullYear();
-	if(document.documentElement.clientHeight <= 780){
-		if(document.getElementById("footerBox").style.position!="relative"){
-			document.getElementById("footerBox").style.position="relative";
-			document.getElementById("footerBox").style.bottom="100px";
-		}
-	}else{
-		if(document.getElementById("footerBox").style.position!="fixed"){
-			document.getElementById("footerBox").style.position="fixed";
-			document.getElementById("footerBox").style.bottom="0px";
-		}
-	}
+  var d = new Date();
+  document.getElementById("footerYear").innerHTML=d.getFullYear();
+  if(document.documentElement.clientHeight <= 900){
+    if(document.getElementById("footerBox").style.position!="relative"){
+      document.getElementById("footerBox").style.position="relative";
+      document.getElementById("footerBox").style.bottom="-214px";
+    }
+  }else{
+    if(document.getElementById("footerBox").style.position!="fixed"){
+      document.getElementById("footerBox").style.position="fixed";
+      document.getElementById("footerBox").style.bottom="0px";
+    }
+  }
 }
 
 //The method below adjust footer position status.
 window.onresize=function(){
-	console.log(document.documentElement.clientHeight);
-	if(document.documentElement.clientHeight <= 780){
-		if(document.getElementById("footerBox").style.position!="relative"){
-			document.getElementById("footerBox").style.position="relative";
-			document.getElementById("footerBox").style.bottom="100px";
-		}
-	}else{
-		if(document.getElementById("footerBox").style.position!="fixed"){
-			document.getElementById("footerBox").style.position="fixed";
-			document.getElementById("footerBox").style.bottom="0px";
-		}
-	}
-};
+  //console.log(document.getElementById("wrapper").clientHeight);
+  if(document.documentElement.clientHeight <= 900){
+    if(document.getElementById("footerBox").style.position!="relative"){
+      document.getElementById("footerBox").style.position="relative";
+      document.getElementById("footerBox").style.bottom="-214px";
+    }
+  }else{
+    if(document.getElementById("footerBox").style.position!="fixed"){
+      document.getElementById("footerBox").style.position="fixed";
+      document.getElementById("footerBox").style.bottom="0px";
+    }
+  }
+}
 
 </script>
 </head>
 
 <body onload="smartYear()">
 
-<div id="wrapper" style="display: block;">
-
-				  
+<div id="wrapper" style="display: block;">			  
 	<div id="header" class="clearfix">
 		<div id="header-container">
 			<div id="logo">
@@ -105,7 +103,6 @@ window.onresize=function(){
 			<h1>202-476-4880</h1>
 			<p>Children's National Health System is committed to timely access<br/> and communication.<br /></p>
 			</div>
-		
 			<div id="loginbox_content">
 				<span id="error" class="msg">User Not Found!</span>
 				<form action="https://childrensgateway.cernerworks.com/communityPortal/login.do" method="post" id="login_form" >	

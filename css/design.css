@@ -14,9 +14,9 @@ body {
 #wrapper {
 	background-color: white;
 	width: 100%;
-	min-height: 750px;
 	margin: 0px auto -160px;
-	padding-bottom: 146px;
+	overflow: hidden;
+	height: 700px;
 }
 
 
@@ -123,17 +123,25 @@ td.topnav {
 	color: red;
 	font-size: 13px;
 }
-label{
+
+label, #loginbox_content span.user-name{
 	font-size:16px;
 	color: #333333;
 	line-height: 24px;
+}
+
+#loginbox_content span.user-name{
+	color: #59A0D4;
+	text-align: center;
+	width: 180px;
+	display: inline-block;
 }
 
 input[type="text"] {
 }
 
 input {
-	width: 200px;
+	width: 180px;
 	float: right;
 	padding: 5px 0;
 }
@@ -148,7 +156,7 @@ input[type="submit"] {
 	color: #fff;
 	overflow: hidden;
 	border: #888888;
-	background: #59a0d4;
+	background: #59A0D4;
 background: -moz-linear-gradient(top,#59a0d4 0,#438bc6 100%);
 background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#59a0d4),color-stop(44%,#8f0222),color-stop(100%,#438bc6));
 background: -webkit-linear-gradient(top,#59a0d4 0,#438bc6 100%);
@@ -159,7 +167,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59a0d4',endCo
 }
 
 form#login_form {
-	width: 300px;
+	width: 350px;
 	display:block;
 	margin: 0px auto;
 	overflow: hidden;
@@ -172,6 +180,8 @@ form#login_form p{
 form#login_form p label{
 	display:inline-block;
 	line-height: 32px;
+	width: 150px;
+	text-align: right;
 }
 
 
