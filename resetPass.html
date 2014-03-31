@@ -1,0 +1,156 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<html>
+<HEAD>
+
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="IBM Software Development Platform">
+<META http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Children's National Medical Center - Physicians Portal</title>
+<link href="css/designNew.css" rel="stylesheet" type="text/css" />
+<!--
+.style1 {
+  color: #333333;
+  font-weight: bold;
+}
+.style2 {color: #666666}
+-->
+
+
+
+<script>
+function isEmpty(inputStr) {
+  if (inputStr == null || inputStr == "" || inputStr.length<1) {
+    return true;
+  }
+  for (var i=0; i<inputStr.length; i++) {
+    var oneChar=inputStr.charAt(i);
+    if (oneChar!=" ") {
+      return false;
+    }
+  }
+  return true;
+}
+function validateForm(form){
+
+  if(isEmpty(form.password.value)){
+     alert("Please enter old password!");
+     return false;
+  }
+  if(isEmpty(form.newPassword.value)){
+     alert("Please enter new password!");
+     return false
+  }
+  
+  if(isEmpty(form.newPassword2.value)){
+     alert("Please retype password!");
+     return false;
+  }
+  if (form.newPassword.value != form.newPassword2.value){
+     alert("Retype password must be equal to new password");
+      return false;
+  }
+    form.submit();
+
+}
+
+function isValidPass(){
+
+  if(isEmpty(form.password.value)){
+     alert("Please enter password!");
+     return false
+  }
+  if (!BadCharForAddrs(document.form.newPassword.value)){
+          alert("You can not enter $ % & \  * ~ ^ ? in your password!")
+          return false;
+    }
+    if (document.form.newpassword1.value != document.form.newPassword2.value){
+     alert("Retype password must be equal to new password"); return false;
+  }
+
+  else {
+    return true;
+  }
+}
+</script>
+</head>
+
+
+
+<body onload="smartYear()">
+
+<div id="wrapper" style="display: block;">
+
+          
+  <div id="header" class="clearfix">
+    <div id="header-container">
+      <div id="logo">
+        <a href="http://childrensnational.org"><img src="images/cn-logo-new.jpg" /></a>
+      </div>
+    </div>
+  </div>
+    <div id="container">
+      <div id="headline_content"><h2>Referring Physician Access Line:</h2>
+      <h1>202-476-4880</h1>
+      <p>Children's National Health System is committed to timely access<br/> and communication.<br /></p>
+      </div>
+    
+      <div id="loginbox_content">
+      <span id="error" class="msg">Password is expired.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+    <form action="login.do" method="post" id="login_form">
+      <p><label>Username:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fcorder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="hidden" id="name" value="fcorder" name="username"/></label></p>
+      <p><label>Old Password: </label><input type="password" id="name" value=""  name="password"/></p>
+      <p><label>New Password: </label><input type="password" id="name" value=""  name="newPassword"/></p>
+      <p><label>Retype Password: </label><input type="password" id="name"  name="newPassword2"    /> </p>
+    <input type="hidden"  id="name" value="C135" name="domain"    />
+         <input type="submit" name="reset" id="login_form_login_button" onclick="return validateForm(this.form);" value="Reset">
+</form>
+      </div>
+      <div id="loginbox_content"><br /></div>
+    </div>
+
+<div class="push"></div>
+
+<div class="pre-footer">
+  <div class="pre-footer-content">
+    <p>111 Michigan Ave NW Washington, DC 20010<br/>
+      <strong>Phone:</strong> 202-476-5000</p>
+  </div>
+</div>  
+
+        
+<div class="footer-wrapper">        
+        <div id="footer-navigation">
+      <a href="http://childrensnational.org/contact/">Contact Us</a>
+        &nbsp; | &nbsp; 
+      <a href="http://childrensnational.org/Visiting/locations/">Directions</a>
+        &nbsp; | &nbsp; 
+      <a href="http://www.childrensnational.org/refer/default.aspx">Refer a Patient</a>
+        &nbsp; | &nbsp; 
+      <a href="http://childrensnational.org/about/privacy.aspx">&copy; <span id="footerYear">2014</span> &amp; Privacy Statement</a>
+      </div>
+</div>
+
+<script src="https://www.childrensnational.org/scripts/Gateway_trackExternal.js" type="text/JavaScript"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10185736-1");
+pageTracker._setDomainName("childrensgateway.org");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+
+
