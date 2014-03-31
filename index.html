@@ -52,11 +52,43 @@ function validateForm(form){
 
 }
 
+function smartYear()
+{
+	var d = new Date();
+	document.getElementById("footerYear").innerHTML=d.getFullYear();
+	if(document.documentElement.clientHeight <= 780){
+		if(document.getElementById("footerBox").style.position!="relative"){
+			document.getElementById("footerBox").style.position="relative";
+			document.getElementById("footerBox").style.bottom="100px";
+		}
+	}else{
+		if(document.getElementById("footerBox").style.position!="fixed"){
+			document.getElementById("footerBox").style.position="fixed";
+			document.getElementById("footerBox").style.bottom="0px";
+		}
+	}
+}
+
+//The method below adjust footer position status.
+window.onresize=function(){
+	console.log(document.documentElement.clientHeight);
+	if(document.documentElement.clientHeight <= 780){
+		if(document.getElementById("footerBox").style.position!="relative"){
+			document.getElementById("footerBox").style.position="relative";
+			document.getElementById("footerBox").style.bottom="100px";
+		}
+	}else{
+		if(document.getElementById("footerBox").style.position!="fixed"){
+			document.getElementById("footerBox").style.position="fixed";
+			document.getElementById("footerBox").style.bottom="0px";
+		}
+	}
+};
 
 </script>
 </head>
 
-<body>
+<body onload="smartYear()">
 
 <div id="wrapper" style="display: block;">
 
@@ -75,54 +107,35 @@ function validateForm(form){
 			</div>
 		
 			<div id="loginbox_content">
-				
-				<form action="login.do" method="post" id="login_form" >		
-					<div class="username">
-					<p>Username:</p><label><input type="text" id="name" value="" name="username" /></label> 
-					</div>
-					<div class="password" style="clear:both;">
-					<p>Password:</p><label> <input type="password" id="name" value="" name="password" /> </label>
-					</div>
-					<label>
-						<input type="hidden"  id="name" value="P135" name="domain"    /> 
-					 	<input type="submit" id="login_form_login_button" value="Login" onclick="return validateForm(this.form);">
-					 </label>
+				<span id="error" class="msg">User Not Found!</span>
+				<form action="https://childrensgateway.cernerworks.com/communityPortal/login.do" method="post" id="login_form" >	
+					<p><label>Username:</label><input type="text" id="name" value="" name="username" /></p>
+					<p><label>Password:</label><input type="password" id="name" value="" name="password" /></p>
+					<input type="hidden"  id="name" value="P135" name="domain"    /> 
+					<input type="submit" id="login_form_login_button" value="Login" onclick="return validateForm(this.form);">
 				</form>
 			</div>
 			<div id="loginbox_content"><br /></div>
 		</div>
-
-<div class="push"></div>
-
-<div class="pre-footer">
+</div>
+		    
+<div id="footerBox" class="pre-footer">
 	<div class="pre-footer-content">
 		<p>111 Michigan Ave NW Washington, DC 20010<br/>
 			<strong>Phone:</strong> 202-476-5000</p>
 	</div>
-</div>	
-
-<footer>			    
-				    
+	<div class="footer-wrapper">		    
         <div id="footer-navigation">
-    
-		<a href="http://childrensnational.org/contact/">Contact Us</a>
-	
-			&nbsp; | &nbsp; 
-	
-		<a href="http://childrensnational.org/Visiting/locations/">Directions</a>
-	
-			&nbsp; | &nbsp; 
-	
-		<a href="http://www.childrensnational.org/refer/default.aspx">Refer a Patient</a>
-	
-			&nbsp; | &nbsp; 
-	
-		<a href="http://childrensnational.org/about/privacy.aspx">&copy; 2014 &amp; Privacy Statement</a>
-
-	
+			<a href="http://childrensnational.org/contact/">Contact Us</a>
+				&nbsp; | &nbsp; 
+			<a href="http://childrensnational.org/Visiting/locations/">Directions</a>
+				&nbsp; | &nbsp; 
+			<a href="http://www.childrensnational.org/refer/default.aspx">Refer a Patient</a>
+				&nbsp; | &nbsp; 
+			<a href="http://childrensnational.org/about/privacy.aspx">&copy; <span id="footerYear">2014</span> &amp; Privacy Statement</a>
 	    </div>
-</footer>
-
+	</div>
+</div>	
 
 <script src="https://www.childrensnational.org/scripts/Gateway_trackExternal.js" type="text/JavaScript"></script>
 <script type="text/javascript">
