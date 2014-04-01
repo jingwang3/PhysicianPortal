@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML>
 
 <html xmls="http://www.w3.org/1999/xhtml">
@@ -56,7 +54,7 @@ function smartYear()
 {
   var d = new Date();
   document.getElementById("footerYear").innerHTML=d.getFullYear();
-  if(document.documentElement.clientHeight <= 900){
+  if(window.innerHeight <= 900){
     if(document.getElementById("footerBox").style.position!="relative"){
       document.getElementById("footerBox").style.position="relative";
       document.getElementById("footerBox").style.bottom="-214px";
@@ -71,8 +69,7 @@ function smartYear()
 
 //The method below adjust footer position status.
 window.onresize=function(){
-  //console.log(document.getElementById("wrapper").clientHeight);
-  if(document.documentElement.clientHeight <= 900){
+  if(window.innerHeight <= 900){
     if(document.getElementById("footerBox").style.position!="relative"){
       document.getElementById("footerBox").style.position="relative";
       document.getElementById("footerBox").style.bottom="-214px";
