@@ -194,14 +194,16 @@ form#login_form p label{
 	color: #333333;
 }
 
-h1 {
+h2 {
 	color: #c72f22;
 	margin:0px;
+	font-size: 26px;
 }
 
-h2 {
+h1 {
 	color: #333333;
 	margin:0px 0px 5px 0px;
+	font-size: 26px;
 }
 
 
