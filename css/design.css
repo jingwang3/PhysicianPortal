@@ -213,8 +213,8 @@ h1 {
 	background-color: #ffffff;
 	background-image: url(../images/pre-footer-bg.jpg);
 	background-repeat: repeat-x;
-	position: fixed;
-	bottom: 0;
+	position: relative;
+	bottom: -214px;
 }
 
 .pre-footer-content {
