@@ -3,7 +3,7 @@
 
 <html>
 <HEAD>
-
+<meta http-equiv="x-ua-compatible" content="IE=edge">
 <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <META name="GENERATOR" content="IBM Software Development Platform">
 <META http-equiv="Content-Style-Type" content="text/css">
@@ -79,7 +79,7 @@ function smartYear()
 {
   var d = new Date();
   document.getElementById("footerYear").innerHTML=d.getFullYear();
-  if(window.innerHeight <= 900){
+  if(document.documentElement.clientHeight <= 900){
     if(document.getElementById("footerBox").style.position!="relative"){
       document.getElementById("footerBox").style.position="relative";
       document.getElementById("footerBox").style.bottom="-214px";
@@ -94,7 +94,7 @@ function smartYear()
 
 //The method below adjust footer position status.
 window.onresize=function(){
-  if(window.innerHeight <= 900){
+  if(document.documentElement.clientHeight <= 900){
     if(document.getElementById("footerBox").style.position!="relative"){
       document.getElementById("footerBox").style.position="relative";
       document.getElementById("footerBox").style.bottom="-214px";
