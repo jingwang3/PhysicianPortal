@@ -1,0 +1,478 @@
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Patient List</title>
+<LINK REL="STYLESHEET" HREF="http://159.140.97.10/communityPortal/styles/styles.css" TYPE="text/css">
+<LINK REL="STYLESHEET" HREF="http://159.140.97.10/communityPortal/styles/css/psm1.css" TYPE="text/css">
+
+</head>
+
+
+<!-- prepares a time-date string with the client's current date and time -->
+<script language="javascript">
+<!--
+	var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+	var now = new Date();
+	var month = months[now.getMonth()];
+	var date = now.getDate();
+	var year = now.getYear();
+	var rawHours = now.getHours();
+	var rawMinutes = now.getMinutes();
+	var amOrPm = (rawHours <= 11) ? "am" : "pm";
+	var hours = (rawHours > 12) ? rawHours - 12 : rawHours;
+	var minutes = (rawMinutes < 10) ? "0" + rawMinutes : rawMinutes;
+
+	if (year < 100) {
+		year = year + 2000;
+	} else {
+		if (year < 2000) {
+			year = year + 1900;
+		}
+	}
+
+	var dateStamp = month + " " + date + ", " + year + " - " + hours + ":" + minutes + " " + amOrPm;
+//-->
+</script>
+
+<script language="JavaScript">
+<!--
+function xpando(expObj){
+	var maxY;
+	var mod = document.getElementById(expObj);
+
+                    maxY = window.document.body.clientHeight-mod.offsetTop-10;
+
+	mod.style.height=maxY;
+}
+function WinOpen(fname) {
+	open(fname, "newWindow");
+}
+// -->
+</script>
+<!-- <body bgcolor=FFFFFF text=000000 link=000066 alink=FF0000 vlink=660066
+	onLoad="xpando('Layer1')" onResize="xpando('Layer1')"
+	onUnload="checkXing()">-->
+	<body>
+<font face="Verdana" size="1"> <!-- physicianportal1 header style - begins -->
+
+<div class="bannerBranding"></div>
+
+<!-- physicianportal1 header style - ends --> <SCRIPT
+	LANGUAGE="JavaScript">
+
+<!-- Basically, this is a modified JavaScript function from index1/template_header.inc -->
+<!-- However, index1/template_header.inc may not be available for some pages such as add.jsp, colors.jsp, and move.jsp -->
+<!-- Therefore, it is added here as a workaround-->
+<!-- prepares a time-date string with the client's current date and time -->
+<!--
+	var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+	var now = new Date();
+	var month = months[now.getMonth()];
+	var date = now.getDate();
+	var year = now.getYear();
+	var rawHours = now.getHours();
+	var rawMinutes = now.getMinutes();
+	var amOrPm = (rawHours <= 11) ? "am" : "pm";
+	var hours = (rawHours > 12) ? rawHours - 12 : rawHours;
+	var minutes = (rawMinutes < 10) ? "0" + rawMinutes : rawMinutes;
+
+	if (year < 100) {
+		year = year + 2000;
+	} else {
+		if (year < 2000) {
+			year = year + 1900;
+		}
+	}
+
+	var dateStamp = month + " " + date + ", " + year + " - " + hours + ":" + minutes + " " + amOrPm;
+
+	var dateStampNav = month + " " + date + ", " + year;
+	var dateStampChrome = rawHours + ":" + minutes;
+//-->
+</SCRIPT> <!-- Navigation - begins -->
+
+
+<div class="bannerLogo"></div>
+<div class="bannerSolidDivider"></div>
+<div class="bannerContextColor"></div>
+<div class="bannerBrokenDivider"></div>
+<div class="bannerTabColor"></div>
+<div class="bannerBottomLine"></div>
+<div class="bannerLeftCurve"></div>
+<div class="bannerDateBack"></div>
+<div class="bannerDate" nowrap><script language="javascript">
+	        <!-- // hide from non-js browsers
+	    	document.write(dateStampNav);
+		// -->
+	</script></div>
+<div class="bannerDateBack"></div>
+
+<div class="PhysicianPortalSignout"><a href="logout.do"><img
+	src="http://159.140.97.10/communityPortal/images/but_signout.gif" alt="Click to sign out the Portal"
+	border="0" width="74" height="18"></a></div>
+<!-- Navigation - ends -->
+
+<table style="visibility:hidden" width="100%" border="0" cellspacing="0"
+	cellpadding="0" height="80">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
+<!-- Welcome portal users, Date and Time - begins--> <script
+	language="JavaScript">
+                        function checkXing() {
+
+                        }
+                        </script> <!-- start context area -->
+<table class="bannerContextRow" cellpadding="0" cellspacing="0"
+	border="0" nowrap>
+	<tr>
+		<td nowrap>Welcome</td>
+		<td nowrap>&nbsp;</td>
+		<td nowrap>User:&nbsp; DESAI, BIJAL MD
+		</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+			<td align=right nowrap><!--<a href="person.html"><b>My Info</a></b> | --><a
+			href="javascript:WinOpen('http://www.childrensnational.org');"><b>Children's National 
+		Website</b></a></td>
+	</tr>
+</table>
+
+<!-- Welcome portal users, Date and Time - ends --> 
+
+<!-- front page tab style - begins -->
+
+        <!-- Tab block - begins -->
+	<table class="bannerTabRow" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+
+			<!-- Tab 1 - begins -->
+
+                       <td  class="bannerTabLit" bgcolor="9999CC"><a class="tabNav" href="patientList.do?pageID=worklist">My Patients</a></td>
+
+ 		        <!-- Tab 1 - ends -->
+			<!-- Tab 1 - begins -->
+
+                      <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+                       <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="teamList.do?pageID=teamList">Group Patients</a></td>
+
+ 		        <!-- Tab 1 - ends -->
+			<!-- Tab 2 - begins -->
+
+                        <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+                        <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="search.do?pageID=search">Search</td>
+
+ 		        <!-- Tab 2 - ends -->
+
+			<!-- Tab 3 - begins -->
+
+                        <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+                       <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="phyDoc.do?pageID=phyDoc">MD Documents</a></td>
+
+ 		        <!-- Tab 3 - ends -->
+
+			<!-- Tab 4 - begins -->
+
+                        <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+                            <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="nursingDoc.do?pageID=nursingDoc">RN Documents</a></td>
+
+ 		        <!-- Tab 4 - ends -->
+
+			<!-- Tab 5 - begins -->
+
+                        <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+                                  <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="lab.do?pageID=lab">Labs</a></td>
+
+ 		        <!-- Tab 5 - ends -->
+
+
+			<!-- Tab 6 - begins -->
+
+                        <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+ <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="rad.do?pageID=rad">Rad</a></td>
+
+ 		        <!-- Tab 6 - ends -->
+
+
+
+
+
+			<!-- Tab 6 - begins -->
+
+
+
+                        <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+                               <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="rounds.do?pageID=rounds">Inpatient Summary</a></td>
+
+ 		        <!-- Tab 6 - ends -->
+
+			<!-- Tab 6 - begins -->
+
+                        <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+              <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="links.do?pageID=links">Links</a></td>
+
+ 		        <!-- Tab 6 - ends -->
+
+
+
+			<!-- Tab 7 - begins -->
+
+                        <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
+
+
+
+            </tr>
+        </table>
+        <!-- Tab block - ends -->
+<!-- front page tab style - ends -->
+ 
+
+
+
+
+
+<div id="Layer1" class="hppModuleArea">
+
+<table border="0" bgcolor="000000" cellspacing="0" cellpadding="1" width=100%>
+<tr>
+  <td>
+
+    <table border="0" bgcolor="9999CC" cellspacing="0" cellpadding="0" width="100%">
+      <tr class="chromeHeader" bgcolor="9999CC">
+         <td class="chromeLeftButtons" width="1%" nowrap>
+
+
+</td>
+<td class="chromeTitle" width="98%" nowrap>
+<font color="000000">
+Patient List
+</font>
+</td>
+<td class="chromeRightButtons" width="1%" nowrap>last refresh:
+
+<script language="javascript">
+<!-- // hide from non-js browsers
+      document.write(dateStampChrome);
+// -->
+</script>
+
+
+</td>
+</tr>
+<tr>
+<td class="chromeTerminate" colspan="3"></td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%">
+<tr bgcolor="FFFFFF">
+<td>
+
+
+  <div class="tableSection">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr><td></td><td></td></tr>
+        <tr><td> Facility:  Children's National Medical Center</td><td>Census Type: My Patients </td>
+
+        <tr><td>&nbsp;</td><td></td></tr>
+      <form name="statusFilterForm" action=patientList.do method="post">
+        <tr>
+        <td colspan=2><b>Patient Status Filter: </b> <select name="statusFilter">
+        <option value="admittedFilter"  selected >Admitted</option>
+        <option value="dischargedFilter" >Discharged</option>
+        </select> in  <input type="text" size ="5" name="timeValue" value="180">
+        <input type="hidden" name="timeUnit" value="days"> days
+        <!--  <select name="timeUnit">
+       
+        <option value="days"   selected >Days</option>
+        <option value="hours"  >Hours</option>
+        <option value="minutes"  >Minutes</option>
+        </select>&nbsp;&nbsp; -->
+        <input type=submit name="getPatientsButton" value="Get Patient List">
+             
+        </td>
+        </tr>
+        </form>
+        
+        <tr><td colspan=2> <br>Your default patient list will display any patients (inpatient or outpatient) where you are listed as the primary provider and who have been seen in the last 180 days.  To search for your patients seen more than 180 days ago, adjust the days and select Get Patient List.<br><br>
+			If you cannot locate a patient under your care, please call 202-476-5408, Monday-Friday between the hours of 8:30 am and 5 pm.  Inquiries at other times can be made by <a href="javascript:WinOpen('http://www.childrensnational.org/ForDoctors/gateway/forms/RequestAssistance.aspx');"><b><font color=blue>filling out this form</font></b></a>. A member of the Children's National team will contact you within 48 hours regarding your request.<br><br></td></tr>
+    </table>
+  </div>
+
+
+ <div class="tableSection">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr><td><b>2 Patients  </b>&nbsp; &nbsp; &nbsp;<!-- <input type="submit" name="modify" value="Modify Address">--></td><td></td></tr>
+    </table>
+  </div>
+   <div class="tableGeneratorSection">
+     
+    <table cellpadding="0" cellspacing="0" border="1"><tr>
+   <!-- <th>Modify address</th>-->
+  
+      <th><a href=patientList.do?orderby=fullName&sort=dn>Pat. Name
+          
+      
+    </a></th> 
+   
+   
+  
+      <th>&nbsp;<a href=patientList.do?orderby=dob&sort=dn>Dob
+          
+      
+    </a></th>   
+ 
+      <th><a href=patientList.do?orderby=mrn&sort=dn>MRN
+          
+     
+    </a></th> 
+   
+   
+   
+   <th nowrap><a href="patientList.do?orderby=admitted&sort=dn">Visit Date
+  
+    <img border=0 src=images/hpp_sortarrow_dn.gif>
+  
+    </a>
+    </th>
+    
+ 
+      <th><a href=patientList.do?orderby=sex&sort=dn>Sex
+          
+     
+    </a></th> 
+    
+    <th><a href=patientList.do?orderby=pt&sort=dn>Pt Type
+          
+    
+    
+    
+    </a></th>
+    
+    <th><a href=patientList.do?orderby=attending&sort=dn>Attending
+          
+    
+    
+    
+    </a></th>
+    
+    <th>Adm. Diagnosis</th>
+   
+    
+      <th><a href=patientList.do?orderby=encounter&sort=dn>Last account#
+          
+     
+    </a></th>  
+
+    <!--<th><a href="" class="nav">Allergies</a></th>--></tr>
+
+
+
+
+
+
+   <tr>
+   <!-- <td><input value="0" name="radio" type="radio"></td>-->
+    <td><a href="phyDoc.do?pageID=phyDoc&personId=5.2936996E7&encounterId=2.273116E7">
+    DONOTUSE, EDONE MAIN</a></td>
+    <td>&nbsp;7/7/2010</td><td>&nbsp;530308879&nbsp;</td>
+    <td>&nbsp;8/8/2014&nbsp;</td><td>&nbsp; M</td><!--<td></td>--><td>&nbsp;Emergency&nbsp;</td><td nowrap>CHAMBERLAIN, JAMES M MD, &nbsp;</td><td>&nbsp;&nbsp;</td>
+	<td><a href="phyDoc.do?pageID=phyDoc&personId=5.2936996E7&encounterId=2.273116E7">1422000023</a>&nbsp;</td></tr>
+     <!--     <td>&nbsp;4 mo&nbsp;</td>-->
+
+
+    </tr>
+        
+
+
+
+   <tr>
+   <!-- <td><input value="0" name="radio" type="radio"></td>-->
+    <td><a href="phyDoc.do?pageID=phyDoc&personId=5.2960233E7&encounterId=2.2703091E7">
+    DES, LEONARD</a></td>
+    <td>&nbsp;1/1/2011</td><td>&nbsp;21097280&nbsp;</td>
+    <td>&nbsp;8/1/2014&nbsp;</td><td>&nbsp; M</td><!--<td></td>--><td>&nbsp;Emergency&nbsp;</td><td nowrap>CHAMBERLAIN, JAMES M MD, &nbsp;</td><td>&nbsp;&nbsp;</td>
+	<td><a href="phyDoc.do?pageID=phyDoc&personId=5.2960233E7&encounterId=2.2703091E7">1421300002</a>&nbsp;</td></tr>
+     <!--     <td>&nbsp;4 mo&nbsp;</td>-->
+
+
+    </tr>
+        
+
+
+</table>
+</div>
+
+
+<!-- <form action="PatientList.do" method="post" id="_form">
+<button  type="submit"">PatientList.do</button>
+</form>-->
+
+<form name="hiddenForm"   action="PatientDemographics.do" method="post" id="_form">
+<input type="hidden" id="encounterId" name="encounterId" />
+
+</form>
+
+
+
+
+
+
+				</td>
+			</tr>
+		</table>
+
+		</td>
+	</tr>
+</table>
+<br>
+
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</div>
+
+
+<script src="https://www.childrensnational.org/scripts/Gateway_trackExternal.js" type="text/JavaScript"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10185736-1");
+pageTracker._setDomainName("childrensgateway.org");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+        
+</body>
+</html>
