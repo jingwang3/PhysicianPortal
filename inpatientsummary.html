@@ -8,11 +8,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Patient List</title>
-<LINK REL="STYLESHEET" HREF="http://159.140.97.10/communityPortal/styles/styles.css" TYPE="text/css">
-<LINK REL="STYLESHEET" HREF="http://159.140.97.10/communityPortal/styles/css/psm1.css" TYPE="text/css">
+<title>Rounds Report</title>
+<LINK REL="STYLESHEET" HREF="styles/styles.css" TYPE="text/css">
+<LINK REL="STYLESHEET" HREF="styles/css/psm1.css" TYPE="text/css">
 <LINK REL="STYLESHEET" HREF="css/account.css" TYPE="text/css">
-
 </head>
 
 
@@ -163,7 +162,7 @@ function WinOpen(fname) {
 
 			<!-- Tab 1 - begins -->
 
-                       <td  class="bannerTabLit" bgcolor="da291c"><a class="tabNav" href="#">My Patients</a></td>
+                       <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="account.html">My Patients</a></td>
 
  		        <!-- Tab 1 - ends -->
 			<!-- Tab 1 - begins -->
@@ -224,7 +223,7 @@ function WinOpen(fname) {
 
                         <td><img src="http://159.140.97.10/communityPortal/images/head_dottedvert.gif" width="1" height="22"></td>
 
-                               <td class="bannerTabDark" bgcolor="CCCCCC"><a class="tabNav" href="inpatientsummary.html">Inpatient Summary</a></td>
+                               <td class="bannerTabLit" bgcolor="da291c"><a class="tabNav" href="#">Inpatient Summary</a></td>
 
  		        <!-- Tab 6 - ends -->
 
@@ -250,216 +249,142 @@ function WinOpen(fname) {
 <!-- front page tab style - ends -->
  
 
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 
 
 <div id="Layer1" class="hppModuleArea">
-
-<table border="0" bgcolor="000000" cellspacing="0" cellpadding="1" width=100%>
-<tr>
-  <td>
-
-    <table border="0" bgcolor="da291c" cellspacing="0" cellpadding="0" width="100%">
-      <tr class="chromeHeader" bgcolor="da291c">
-         <td class="chromeLeftButtons" width="1%" nowrap>
-
-
-</td>
-<td class="chromeTitle" width="98%" nowrap>
-<font color="000000">
-Patient List
-</font>
-</td>
-<td class="chromeRightButtons" width="1%" nowrap>last refresh:
-
-<script language="javascript">
-<!-- // hide from non-js browsers
-      document.write(dateStampChrome);
-// -->
-</script>
-
-
-</td>
-</tr>
-<tr>
-<td class="chromeTerminate" colspan="3"></td>
-</tr>
-</table>
-
-<table border="0" cellspacing="0" cellpadding="4" width="100%">
-<tr bgcolor="FFFFFF">
-<td>
+<table border="0" bgcolor="000000" cellspacing="0" cellpadding="1"
+	width=100%>
+	<tr>
+		<td>
+		<table border="0" bgcolor="da291c" cellspacing="0" cellpadding="0"
+			width="100%">
+			<tr class="chromeHeader" bgcolor="da291c">
+				<td class="chromeLeftButtons" width="1%" nowrap></td>
+				<td class="chromeTitle" width="98%" nowrap><font color="000000">
+				Patient Demographics </font></td>
+				<td class="chromeRightButtons" width="1%" nowrap>last refresh: <script
+					language="javascript">
+	<!-- // hide from non-js browsers
+	      document.write(dateStampChrome);
+	// -->
+	</script></td>
+			</tr>
+			<tr>
+				<td class="chromeTerminate" colspan="3"></td>
+			</tr>
+		</table>
+	
+		<table border="0" cellspacing="0" cellpadding="4" width="100%">
+			<tr bgcolor="FFFFFF">
+				<td>
 
 
-  <div class="tableSection">
-    <table cellpadding="0" cellspacing="0" border="0">
-        <tr><td></td><td></td></tr>
-        <tr><td> Facility:  Children's National Medical Center</td><td>Census Type: My Patients </td>
+				<div class="tableGeneratorSection">
+				<table cellpadding="0" cellspacing="0" border="1">
 
-        <tr><td>&nbsp;</td><td></td></tr>
-      <form name="statusFilterForm" action=patientList.do method="post">
-        <tr>
-        <td colspan=2><b>Patient Status Filter: </b> <select name="statusFilter">
-        <option value="admittedFilter"  selected >Admitted</option>
-        <option value="dischargedFilter" >Discharged</option>
-        </select> in  <input type="text" size ="5" name="timeValue" value="180">
-        <input type="hidden" name="timeUnit" value="days"> days
-        <!--  <select name="timeUnit">
-       
-        <option value="days"   selected >Days</option>
-        <option value="hours"  >Hours</option>
-        <option value="minutes"  >Minutes</option>
-        </select>&nbsp;&nbsp; -->
-        <input type=submit name="getPatientsButton" value="Get Patient List">
-             
-        </td>
-        </tr>
-        </form>
-        
-        <tr><td colspan=2> <br>Your default patient list will display any patients (inpatient or outpatient) where you are listed as the primary provider and who have been seen in the last 180 days.  To search for your patients seen more than 180 days ago, adjust the days and select Get Patient List.<br><br>
-			If you cannot locate a patient under your care, please call 202-476-5408, Monday-Friday between the hours of 8:30 am and 5 pm.  Inquiries at other times can be made by <a href="javascript:WinOpen('http://www.childrensnational.org/ForDoctors/gateway/forms/RequestAssistance.aspx');"><b><font color=blue>filling out this form</font></b></a>. A member of the Children's National team will contact you within 48 hours regarding your request.<br><br></td></tr>
-    </table>
-  </div>
-
-
- <div class="tableSection">
-    <table cellpadding="0" cellspacing="0" border="0">
-        <tr><td><b>2 Patients  </b>&nbsp; &nbsp; &nbsp;<!-- <input type="submit" name="modify" value="Modify Address">--></td><td></td></tr>
-    </table>
-  </div>
-   <div class="tableGeneratorSection">
-     
-    <table cellpadding="0" cellspacing="0" border="1"><tr>
-   <!-- <th>Modify address</th>-->
-  
-      <th><a href=patientList.do?orderby=fullName&sort=dn>Pat. Name
-          
-      
-    </a></th> 
-   
-   
-  
-      <th>&nbsp;<a href=patientList.do?orderby=dob&sort=dn>Dob
-          
-      
-    </a></th>   
- 
-      <th><a href=patientList.do?orderby=mrn&sort=dn>MRN
-          
-     
-    </a></th> 
-   
-   
-   
-   <th nowrap><a href="patientList.do?orderby=admitted&sort=dn">Visit Date
-  
-    <img border=0 src="http://159.140.97.10/communityPortal/images/hpp_sortarrow_dn.gif">
-  
-    </a>
-    </th>
-    
- 
-      <th><a href=patientList.do?orderby=sex&sort=dn>Sex
-          
-     
-    </a></th> 
-    
-    <th><a href=patientList.do?orderby=pt&sort=dn>Pt Type
-          
-    
-    
-    
-    </a></th>
-    
-    <th><a href=patientList.do?orderby=attending&sort=dn>Attending
-          
-    
-    
-    
-    </a></th>
-    
-    <th>Adm. Diagnosis</th>
-   
-    
-      <th><a href=patientList.do?orderby=encounter&sort=dn>Last account#
-          
-     
-    </a></th>  
-
-    <!--<th><a href="" class="nav">Allergies</a></th>--></tr>
-
-
-
-
-
-
-   <tr>
-   <!-- <td><input value="0" name="radio" type="radio"></td>-->
-    <td><a href="phyDoc.do?pageID=phyDoc&personId=5.2936996E7&encounterId=2.273116E7">
-    DONOTUSE, EDONE MAIN</a></td>
-    <td>&nbsp;7/7/2010</td><td>&nbsp;530308879&nbsp;</td>
-    <td>&nbsp;8/8/2014&nbsp;</td><td>&nbsp; M</td><!--<td></td>--><td>&nbsp;Emergency&nbsp;</td><td nowrap>CHAMBERLAIN, JAMES M MD, &nbsp;</td><td>&nbsp;&nbsp;</td>
-	<td><a href="phyDoc.do?pageID=phyDoc&personId=5.2936996E7&encounterId=2.273116E7">1422000023</a>&nbsp;</td></tr>
-     <!--     <td>&nbsp;4 mo&nbsp;</td>-->
-
-
-    </tr>
-        
-
-
-
-   <tr>
-   <!-- <td><input value="0" name="radio" type="radio"></td>-->
-    <td><a href="phyDoc.do?pageID=phyDoc&personId=5.2960233E7&encounterId=2.2703091E7">
-    DES, LEONARD</a></td>
-    <td>&nbsp;1/1/2011</td><td>&nbsp;21097280&nbsp;</td>
-    <td>&nbsp;8/1/2014&nbsp;</td><td>&nbsp; M</td><!--<td></td>--><td>&nbsp;Emergency&nbsp;</td><td nowrap>CHAMBERLAIN, JAMES M MD, &nbsp;</td><td>&nbsp;&nbsp;</td>
-	<td><a href="phyDoc.do?pageID=phyDoc&personId=5.2960233E7&encounterId=2.2703091E7">1421300002</a>&nbsp;</td></tr>
-     <!--     <td>&nbsp;4 mo&nbsp;</td>-->
-
-
-    </tr>
-        
-
-
-</table>
-</div>
-
-
-<!-- <form action="PatientList.do" method="post" id="_form">
-<button  type="submit"">PatientList.do</button>
-</form>-->
-
-<form name="hiddenForm"   action="PatientDemographics.do" method="post" id="_form">
-<input type="hidden" id="encounterId" name="encounterId" />
-
-</form>
-
-
-
-
-
+					<tr>
+						<th>Pat. Name</th>
+						<th>Birth Date</th>
+						<th>Sex</th>
+						<th>Primary Care</th>
+						<th>MRN</th>
+						<th>Address</th>
+						<th>Age</th>
+						<th>Contact</th>
+						<th>Home Phone</th>
+					</tr>
+					<tr>
+						<td>DONOTUSE, EDONE MAIN</td>
+						<td>7/7/2010</td>
+						<td>Male</td>
+						<td>DESAI, BIJAL MD</td>
+						<td>530308879</td>
+						<!--<td></td>-->
+						<td nowrap>&nbsp;12345 MARYLAND AVE NWAPT#123<br>WASHINGTON, <br>, 20010</td>
+						<td>4 y</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;(202)678-2346</td>
+					</tr>
+				
+				</table>
+				</div>
 
 				</td>
 			</tr>
 		</table>
 
+
 		</td>
 	</tr>
 </table>
+
 <br>
 
 
 
 
-</td>
-</tr>
-</table>
+
+
+	<table aligh=left border="0" bgcolor="000000" cellspacing="0" cellpadding="1" width=100%>
+
+	    
+	    
+	    <table border="0" cellspacing="0" height=90 cellpadding="4" width="100%">
+		   <tr bgcolor="FFFFFF">
+		   <td width=50% valign=top>
+<div class='tableGeneratorSection1'><table cellpadding='0' cellspacing='0' border='1'><tr><th colspan=2>Rounds Report</th></tr><tr><td class=first height=20><b>Attending: </b></td><td height=20 class=middle>CHAMBERLAIN, JAMES M MD,<br>Contact:<br> Home: (202)259-8184<br>Fax Business: (202)476-3573<br>Business: (202)476-4177<br>Home: (301)869-6613<br>Business: (202)884-4177<br>Pager Bus: <br>ePrescribing Phone: 2024765000<br>ePrescribing Fax: 2024765000<br> </td></tr><tr><td height=20 class=first><b>Service: </b></td><td class=middle>Emergency Room</td></tr><tr><td height=20 class=first><b>Allergies: </b></td><td class=middle>No Known Allergies</td></tr><tr><td height=20 class=first><b>Problems: </b></td><td class=middle>None Specified</td></tr><tr><td height=20 class=first><b>Reason for Admission: </b></td><td class=middle>None Specified</td></tr></table></div><br>
+<br>
+<td><td width=50% valign=top>
+
+<div class='tableGeneratorSection1'><table cellpadding='0' cellspacing='0' border='1'><tr><th height=20>Medication</th></tr><tr><td class=first><b>Active Inpt Meds:</b>None<br><tr><td class=first><b>Active PRN Meds:</b> None<br></td></tr><tr><td class=first><b>One Time Meds: </b>None<br></td></tr><tr><td class=first><b>Active IV Meds: </b>None<br></td></tr></table></div><br><div class='tableGeneratorSection1'>
+<table cellpadding='0' cellspacing='0' border='1'>
+<TR>
+<th colspan=2>36 hour labs</th>
+</TR>
+
+<TR>
+<TD width=50%>
+<b align=center> -  Latest Result  - 
+</TD>
+<TD width=50%>
+<b align=center> - Previous Results - 
+</TD>
+</TR>
+</TABLE>
+<TABLE>
+<table border="1" width="690" bgcolor="#F0F8FF">
+</TABLE>
+</div><br>
+
+		   
+		   </td>
+             
+        
+			</tr>
+		</table>
+
+
+	
 
 
 
-</div>
+<!-- footer style - begins -->
+
+
+
+<!-- footer style - ends -->
+
+<!-- Populate Nav Banner - starts -->
+
+
+
+
+
+
+
+
 
 
 <script src="https://www.childrensnational.org/scripts/Gateway_trackExternal.js" type="text/JavaScript"></script>
